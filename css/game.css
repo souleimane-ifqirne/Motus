@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    z-index: 2000;
+    position: absolute;
+    padding: 0 2rem;
+}
+
+nav {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+.logo:hover {
+    cursor: default;
+    color: #E7002A;
+    transition: 0.3s;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+    overflow: hidden;
+    background: black;
+}
+
+li {
+    position: relative;
+    list-style: none;
+}
+
+a {
+    font-family: 'Lucida Sans';
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #E7002A;
+    transition: 0.3s;
+}
+
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background: #000;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, #fff, #000);
+    animation: animate 5s linear infinite;
+}
+
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+section span:hover {
+    background: #0377c7;
+    transition: 0s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(100%)
+    }
+}
+
+#word-container {
+    z-index: +100; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+}
+
+/* Style des cases */
+.letter {
+    font-family: sans-serif;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(3, 119, 199);
+    border: 1px solid white;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter,
+.correct,
+.present,
+.present::before {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style des lettres correctes */
+.correct {
+    background-color: #E7002A;
+}
+
+/* Style des lettres mal placées */
+.present {
+    z-index: 1;
+    position: relative;
+    background-color: rgb(3, 119, 199);
+    color: white;
+    text-align: center;
+}
+
+.present::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color:  #FFBD02;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Style des lettres absentes */
+.not-in-word {
+    background-color: rgb(3, 119, 199);
+    color: white;
+}
+
+.row {
+    display: flex;
+}
+
+#playagain a {
+    font-size: 50px;
+}
+
+#playagain {
+    border-radius: 5px;
+    text-shadow: 5px 5px 25px #0377c7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pannel{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px white;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    background-color: rgba(34, 34, 34, 0.95);
+    color: white;
+    z-index: 4000;
+}
+
+@media (max-width: 1050px) {
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+
+@media (max-width: 600px) {
+    section span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
+
+@media (max-width: 200px) {
+    section span {
+        width: calc(50vw - 2px);
+        height: calc(50vw - 2px);
+    }
+}
