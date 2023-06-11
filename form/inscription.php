@@ -1,9 +1,6 @@
 <?php
-// Paramètres de connexion à la base de données
-$serveur = 'localhost';
-$utilisateur = 'root';
-$motDePasse = 'Test_Bachelor_Web';
-$baseDeDonnees = 'motus';
+
+require_once "./../config.php";
 
 // Vérification du formulaire d'inscription
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

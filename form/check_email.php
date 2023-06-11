@@ -1,9 +1,6 @@
 <?php
-// Paramètres de connexion à la base de données
-$serveur = '127.0.0.1';
-$utilisateur = 'root';
-$motDePasse = 'Test_Bachelor_Web';
-$baseDeDonnees = 'motus';
+
+require_once "./../config.php";
 
 // Récupération de l'adresse e-mail envoyée par la requête Ajax
 $email = $_POST['email'];

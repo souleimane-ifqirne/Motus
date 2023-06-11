@@ -1,5 +1,7 @@
 <?php
 
+require_once "./config.php";
+
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
@@ -9,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-$conn = new mysqli('127.0.0.1', 'root', 'Test_Bachelor_Web', 'motus');
+$conn = new mysqli($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
 
 if (isset($_POST['score']))
 {

@@ -1,4 +1,7 @@
 <?php
+
+require_once "./config.php";
+
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
@@ -6,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
   exit();
 }
 
-$conn = mysqli_connect('127.0.0.1', 'root', 'Test_Bachelor_Web', 'motus');
+$conn = mysqli_connect($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
 
 if (!$conn) {
     die("Erreur de connexion : " . mysqli_connect_error());
@@ -33,14 +36,7 @@ function generate_motSecret($listeMots)
     return $motSecret;
 }
 
-$conn = mysqli_connect('localhost', 'root', 'Test_Bachelor_Web', 'motus');
-
 $nom_joueur;
-
-if (!$conn)
-{
-    die("Erreur de connexion : " . mysqli_connect_error());
-}
 
 $user_id = $_SESSION['user_id'];
 

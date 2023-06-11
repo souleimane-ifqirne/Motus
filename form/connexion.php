@@ -1,9 +1,6 @@
 <?php
-// Paramètres de connexion à la base de données
-$serveur = 'localhost';
-$utilisateur = 'root';
-$motDePasse = 'Test_Bachelor_Web';
-$baseDeDonnees = 'motus';
+
+require_once "./../config.php";
 
 // Récupération des données du formulaire
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
