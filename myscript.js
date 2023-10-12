@@ -242,7 +242,7 @@ function afficherMessage(message) {
   function send(score) {
 
     var xhr = new XMLHttpRequest();
-    var url = "wall_of_fame.php";
+    var url = "Wall_of_fame.php";
     var params = "score=" + score;
 
     xhr.open("POST", url, true);

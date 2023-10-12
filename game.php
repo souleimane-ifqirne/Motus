@@ -70,7 +70,7 @@ mysqli_close($conn);
             <nav>
                 <h2 class="logo">MOTUS</h2>
                 <ul>
-                    <li><a href="wall_of_fame.php">Wall of Fame</a></li>
+                    <li><a href="./Wall_of_fame.php">Wall of Fame</a></li>
                     <li><a href="#"><?php echo $nom_joueur; ?></a></li>
                 </ul>
                 <a class="button_disc" href="form/deconnexion.php">Deconnexion</a>
