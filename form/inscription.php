@@ -121,8 +121,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/logo_title.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="./../css/form.css">
+    <link rel="icon" href="./../img/logo_title" type="image/png">
     <title>Motus</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

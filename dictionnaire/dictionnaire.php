@@ -60,7 +60,7 @@ function removeAccents($str)
 
 try
 {
-    $conn = new PDO("mysql:host=$serveur;dbname=$baseDeDonnees", $utilisateur, $motDePasse);
+    $conn = new PDO("mysql:host=$serveur;port=$port;dbname=$baseDeDonnees", $utilisateur, $motDePasse);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $filename = "./mots.txt";

@@ -2,7 +2,7 @@
 
 $serveur = 'localhost';
 $utilisateur = 'root';
-$motDePasse = 'Test_Bachelor_Web';
+$motDePasse = 'root';
 $baseDeDonnees = 'motus';
 
 ?>
